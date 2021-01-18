@@ -1,6 +1,6 @@
 # Accessible Tabs Web App
 
-This is my solution to Iress's code challenge. It is a WCAG 2 compliant web project developed using React, where users can interact with multiple tab groups in a single page while they retain their state after page refresh and back/forward navigation.
+This is a WCAG 2 compliant web project developed using React, where users can interact with multiple tab groups in a single page while they retain their state after page refresh and back/forward navigation.
 
 ## Available Scripts
 
