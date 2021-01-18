@@ -22,7 +22,7 @@ const AccessibleTabs: React.FunctionComponent = () => {
         <h2 id="ex_label_1">Example</h2>
         <div role="separator" id="ex_start_sep_1" aria-labelledby="ex_start_sep_1 ex_label_1" aria-label="Start of"/>
 
-        <Tabs id="example_1" aria-label="Another Entertainment" defaultActiveTabKey="nills_1">
+        <Tabs id="example_1" aria-label="Entertainment" defaultActiveTabKey="nills_1">
 
           <Tab tabKey="nills_1" title="Nils Frahm">
             <p>Nils Frahm is a German musician, composer and record producer based in Berlin. He is known for combining
@@ -74,7 +74,7 @@ const AccessibleTabs: React.FunctionComponent = () => {
         <div role="separator" id="ex_start_sep_2" aria-labelledby="ex_start_sep_2 ex_label_2" aria-label="Start of"/>
 
 
-        <Tabs id="example_2" automaticActivation={false} aria-label="Entertainment" defaultActiveTabKey="nills_2">
+        <Tabs id="example_2" automaticActivation={false} aria-label="Another entertainment" defaultActiveTabKey="nills_2">
 
           <Tab tabKey="nills_2" title="Nils Frahm">
             <p>Nils Frahm is a German musician, composer and record producer based in Berlin. He is known for combining
