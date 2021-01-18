@@ -105,22 +105,6 @@ describe('Tabs navigation bar', () => {
       expect(activeTab.innerHTML).toBe('Test Tab 1')
     });
 
-    it('activates next tab by pressing ArrowDown key', () => {
-      act(() => {
-        userEvent.click(screen.getByText('Test Tab 1'))
-      });
-      let activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab.innerHTML).toBe('Test Tab 1')
-
-      const tabList = screen.getByRole('tablist');
-      act(() => {
-        fireEvent.keyDown(tabList, {key: 'ArrowDown', code: 'ArrowDown'})
-      });
-      activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab).toHaveFocus()
-      expect(activeTab.innerHTML).toBe('Test Tab 2')
-    });
-
     it('activates next tab by pressing ArrowLeft key', () => {
       act(() => {
         userEvent.click(screen.getByText('Test Tab 2'))
@@ -151,22 +135,6 @@ describe('Tabs navigation bar', () => {
       activeTab = screen.getByRole('tab', {selected: true})
       expect(activeTab).toHaveFocus()
       expect(activeTab.innerHTML).toBe('Test Tab 2')
-    });
-
-    it('activates next tab by pressing ArrowUp key', () => {
-      act(() => {
-        userEvent.click(screen.getByText('Test Tab 2'))
-      });
-      let activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab.innerHTML).toBe('Test Tab 2')
-
-      const tabList = screen.getByRole('tablist');
-      act(() => {
-        fireEvent.keyDown(tabList, {key: 'ArrowUp', code: 'ArrowUp'})
-      });
-      activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab).toHaveFocus()
-      expect(activeTab.innerHTML).toBe('Test Tab 1')
     });
 
     it('activates first tab by pressing Home key', () => {
@@ -263,23 +231,6 @@ describe('Tabs navigation bar', () => {
       expect(activeTab.innerHTML).toBe('Test Tab 1')
     });
 
-    it('does not activate next tab by pressing ArrowDown key', () => {
-      act(() => {
-        userEvent.click(screen.getByText('Test Tab 1'))
-      });
-      let activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab.innerHTML).toBe('Test Tab 1')
-
-      const tabList = screen.getByRole('tablist');
-      act(() => {
-        fireEvent.keyDown(tabList, {key: 'ArrowDown', code: 'ArrowDown'})
-      });
-      expect((tabList.querySelector(':focus') as Element).innerHTML).toBe('Test Tab 2');
-      activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab).not.toHaveFocus()
-      expect(activeTab.innerHTML).toBe('Test Tab 1')
-    });
-
     it('does not activate next tab by pressing ArrowLeft key', () => {
       act(() => {
         userEvent.click(screen.getByText('Test Tab 2'))
@@ -290,23 +241,6 @@ describe('Tabs navigation bar', () => {
       const tabList = screen.getByRole('tablist');
       act(() => {
         fireEvent.keyDown(tabList, {key: 'ArrowLeft', code: 'ArrowLeft'})
-      });
-      expect((tabList.querySelector(':focus') as Element).innerHTML).toBe('Test Tab 1');
-      activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab).not.toHaveFocus()
-      expect(activeTab.innerHTML).toBe('Test Tab 2')
-    });
-
-    it('does not activate next tab by pressing ArrowUp key', () => {
-      act(() => {
-        userEvent.click(screen.getByText('Test Tab 2'))
-      });
-      let activeTab = screen.getByRole('tab', {selected: true})
-      expect(activeTab.innerHTML).toBe('Test Tab 2')
-
-      const tabList = screen.getByRole('tablist');
-      act(() => {
-        fireEvent.keyDown(tabList, {key: 'ArrowUp', code: 'ArrowUp'})
       });
       expect((tabList.querySelector(':focus') as Element).innerHTML).toBe('Test Tab 1');
       activeTab = screen.getByRole('tab', {selected: true})

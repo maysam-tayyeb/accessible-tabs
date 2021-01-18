@@ -64,11 +64,9 @@ const TabNav: FunctionComponent<TabNavProps> = ({'aria-label': ariaLabel, automa
         nextTab = getLastTab(currentTabList);
         break;
       case 'ArrowLeft':
-      case 'ArrowUp':
         nextTab = getNextTab(currentTabList, -1);
         break;
       case 'ArrowRight':
-      case 'ArrowDown':
         nextTab = getNextTab(currentTabList, 1);
         break;
       default:
