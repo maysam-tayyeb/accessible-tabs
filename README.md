@@ -15,7 +15,9 @@ You will also see any lint errors in the console.
 
 ### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
+
+!! Please bear in mind that on of the test cases causes to throw an intentional error to check TabsContext behavior !!  
 
 ## Analysis
 ***design decisions***

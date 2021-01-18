@@ -317,7 +317,5 @@ describe('Tabs navigation bar', () => {
     }
 
     expect(error.message).toBe('useTabsContext must be used within TabsContextProvider')
-
-    return;
   });
 });
