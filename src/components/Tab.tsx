@@ -17,7 +17,6 @@ const Tab: FunctionComponent<TabProps> = ({title, tabKey, disabled = false}) => 
       data-tab-key={tabKey}
       aria-controls={tabKey}
       aria-selected={selected}
-      aria-disabled={disabled}
       disabled={disabled}
       tabIndex={selected ? undefined : -1}
       onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
